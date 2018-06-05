@@ -1,4 +1,3 @@
-# NOTES
 ## Go语言
 - [数组](https://github.com/yankewei/blog/issues/1)
 - [切片](https://github.com/yankewei/blog/issues/3)
