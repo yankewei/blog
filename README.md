@@ -7,7 +7,7 @@
 
 ## MySQL
 - [用户自定义变量](https://github.com/yankewei/blog/issues/2)
-- [高性能索引策略之前缀索引](https://github.com/yankewei/blog/issues/9)
+- [高性能索引策略-前缀索引](https://github.com/yankewei/blog/issues/9)
 
 ## Docker
 - [杂项记录](https://github.com/yankewei/blog/issues/7)
