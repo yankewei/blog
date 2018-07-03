@@ -10,7 +10,7 @@
 - [高性能索引策略-前缀索引](https://github.com/yankewei/blog/issues/9)
 
 ## Docker
-- [杂项记录](https://github.com/yankewei/blog/issues/7)
+- [错误记录](https://github.com/yankewei/blog/issues/7)
 
 ## PHP
 - [匿名函数递归](https://github.com/yankewei/blog/issues/8)
