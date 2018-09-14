@@ -1,4 +1,4 @@
-## Go语言
+## Go
 - [数组](https://github.com/yankewei/blog/issues/1)
 - [切片](https://github.com/yankewei/blog/issues/3)
 - [映射](https://github.com/yankewei/blog/issues/4)
@@ -17,3 +17,6 @@
 
 ## Redis
 - [简单动态字符串，simple dynamic string，SDS](https://github.com/yankewei/blog/issues/11)
+
+## Python
+- [日常笔记](https://github.com/yankewei/blog/issues/13)
