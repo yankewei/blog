@@ -23,4 +23,4 @@
 
 ## 开源项目笔记
 - showsocks
-  - [深度学习shadowsocks——入口文件](https://github.com/yankewei/blog/issues/14)
+  - [深入学习shadowsocks，从入口文件开始](https://github.com/yankewei/blog/issues/14)
