@@ -22,8 +22,7 @@
 ## Python
 - [日常笔记](https://github.com/yankewei/blog/issues/13)
 
-## 开源项目笔记
-- showsocks
+## showsocks
   - [深入学习shadowsocks，从入口文件开始](https://github.com/yankewei/blog/issues/14)
 
 ## 读后感
