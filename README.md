@@ -18,6 +18,7 @@
 
 ## Redis
 - [简单动态字符串，simple dynamic string，SDS](https://github.com/yankewei/blog/issues/11)
+- [数据持久化](https://github.com/yankewei/blog/issues/20)
 
 ## Python
 - [日常笔记](https://github.com/yankewei/blog/issues/13)
