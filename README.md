@@ -26,5 +26,8 @@
 ## shadowsocks
   - [深入学习shadowsocks，从入口文件开始](https://github.com/yankewei/blog/issues/14)
 
+## 面试题
+  - [Mysql](https://github.com/yankewei/blog/issues/22)
+
 ## 读后感
 - [《社会动物》](https://github.com/yankewei/blog/issues/19)
