@@ -20,6 +20,10 @@
 - [简单动态字符串，simple dynamic string，SDS](https://github.com/yankewei/blog/issues/11)
 - [数据持久化](https://github.com/yankewei/blog/issues/20)
 
+## Java
+- [搭建Java程序设计环境](https://github.com/yankewei/blog/issues/23)
+- [Java的基本程序设计结构]()
+
 ## Python
 - [日常笔记](https://github.com/yankewei/blog/issues/13)
 
