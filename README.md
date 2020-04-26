@@ -22,7 +22,7 @@
 
 ## Java
 - [搭建Java程序设计环境](https://github.com/yankewei/blog/issues/23)
-- [Java的基本程序设计结构]()
+- [Java的基本程序设计结构](https://github.com/yankewei/blog/issues/24)
 
 ## Python
 - [日常笔记](https://github.com/yankewei/blog/issues/13)
