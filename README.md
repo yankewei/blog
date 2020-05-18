@@ -29,6 +29,7 @@
 
 ## FE
 - [HTML概念](https://github.com/yankewei/blog/issues/28)
+- [HTML元素<head>里有什么？](https://github.com/yankewei/blog/issues/29)
 
 ## Python
 - [日常笔记](https://github.com/yankewei/blog/issues/13)
