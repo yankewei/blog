@@ -30,6 +30,7 @@
 ## FE
 - [HTML概念](https://github.com/yankewei/blog/issues/28)
 - [HTML元素<head>里有什么？](https://github.com/yankewei/blog/issues/29)
+- [HTML的结构化和语义化应该怎么做？](https://github.com/yankewei/blog/issues/30)  
 
 ## Python
 - [日常笔记](https://github.com/yankewei/blog/issues/13)
