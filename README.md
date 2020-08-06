@@ -1,5 +1,6 @@
 ## 数据结构和算法
 - [堆排序-完全二叉树](https://github.com/yankewei/blog/issues/32)
+- [堆排序-构建最大堆](https://github.com/yankewei/blog/issues/33)
 ## Go
 - [数组](https://github.com/yankewei/blog/issues/1)
 - [切片](https://github.com/yankewei/blog/issues/3)
