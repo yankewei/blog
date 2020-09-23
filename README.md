@@ -47,5 +47,5 @@
 ## 读后感
 - [《社会动物》](https://github.com/yankewei/blog/issues/19)
 
-## 哎
-- [开言英语学习计划-第七天](https://github.com/yankewei/blog/issues/34)
+## 有趣的事情
+- [不同语言对于位移运算的规则](https://github.com/yankewei/blog/issues/35)
