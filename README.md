@@ -55,4 +55,4 @@
 - [不同语言对于位移运算的规则](https://github.com/yankewei/blog/issues/35)
   
 ## 闲言碎语
-- [2021年日记](https://github.com/yankewei/blog/issues/37)
+- [2021](https://github.com/yankewei/blog/issues/37)
