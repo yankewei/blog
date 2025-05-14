@@ -1,0 +1,6 @@
+{
+    "title": "Display Name",
+    "icon": "MyIcon",
+    "pages": ["index", "(2025)", "(2024)"],
+    "defaultOpen": true
+}
