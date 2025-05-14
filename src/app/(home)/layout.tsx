@@ -8,8 +8,8 @@ export default function Layout({ children }: { children: ReactNode }) {
       {...baseOptions}
       links={[
         {
-          text: 'Documentation',
-          url: '/docs',
+          text: 'Articles',
+          url: '/articles',
         },
       ]}
     >

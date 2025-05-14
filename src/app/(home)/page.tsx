@@ -10,7 +10,7 @@ export default function HomePage() {
       <p className="text-fd-muted-foreground mt-2">
         You can check out my articles{' '}
         <Link
-          href="/docs"
+          href="/articles"
           className="text-fd-foreground font-semibold underline"
         >
           here

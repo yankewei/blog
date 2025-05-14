@@ -23,4 +23,5 @@ export const baseOptions: BaseLayoutProps = {
       </>
     ),
   },
+  githubUrl: 'https://github.com/yankewei'
 };
