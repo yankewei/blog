@@ -1,27 +1,28 @@
 import Link from 'next/link';
 
-export default function SupportPage() {
+export default function PrivacyPage() {
   const apps = [
           {
         id: 'countdown',
         name: '倒数日-支持农历',
         description: '一款帮助您记录重要日期和事件的倒数日应用，支持农历和阳历。',
         icon: '/image/lunar-loop-logo.png',
-        features: [
-          '创建和管理多个倒数日计时器',
-          '支持阳历和农历两种日历系统',
-          '记录生日、纪念日、节日等重要事件',
-          '简洁直观的用户界面'
+        privacyHighlights: [
+          '所有数据本地存储，保护隐私安全',
+          '无需网络连接，离线使用',
+          '绝不向第三方出售个人数据',
+          '完全控制您的倒数日数据'
         ]
       }
+    // 未来可以在这里添加更多APP
   ];
 
   return (
     <main className="flex flex-1 flex-col max-w-4xl mx-auto px-4 py-8">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold mb-4">支持中心</h1>
+        <h1 className="text-3xl font-bold mb-4">隐私中心</h1>
         <p className="text-fd-muted-foreground text-lg">
-          选择应用获取支持信息和联系方式
+          选择应用查看其隐私政策数据处理方式
         </p>
       </div>
 
@@ -41,26 +42,26 @@ export default function SupportPage() {
             </div>
 
             <div className="mb-4">
-              <h3 className="font-semibold mb-2">主要功能：</h3>
+              <h3 className="font-semibold mb-2">隐私亮点：</h3>
               <ul className="text-fd-muted-foreground space-y-1 list-disc list-inside text-sm">
-                {app.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
+                {app.privacyHighlights.map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
                 ))}
               </ul>
             </div>
 
             <div className="flex gap-2">
               <Link
-                href={`/support/${app.id}`}
+                href={`/privacy/${app.id}`}
                 className="flex-1 bg-fd-primary text-fd-primary-foreground px-4 py-2 rounded-md text-center text-sm font-medium hover:bg-fd-primary/90 transition-colors"
               >
-                支持
+                隐私政策
               </Link>
               <Link
-                href={`/privacy/${app.id}`}
+                href={`/support/${app.id}`}
                 className="flex-1 bg-fd-secondary text-fd-secondary-foreground px-4 py-2 rounded-md text-center text-sm font-medium hover:bg-fd-secondary/90 transition-colors"
               >
-                隐私政策
+                支持
               </Link>
             </div>
           </div>
@@ -68,18 +69,19 @@ export default function SupportPage() {
       </div>
 
       <div className="mt-12 text-center">
-        <h2 className="mb-4 text-xl font-semibold">联系我们</h2>
+        <h2 className="mb-4 text-xl font-semibold">隐私保护承诺</h2>
         <p className="text-fd-muted-foreground mb-4">
-          如果您对我们的应用有任何疑问或需要帮助，请随时联系我们。
+          我们致力于保护您的隐私，确保数据处理过程的透明度。
         </p>
-        <div>
-          <p className="text-fd-muted-foreground mb-2">Email:</p>
-          <a 
-            href="mailto:yankewei1993@gmail.com" 
-            className="text-fd-foreground font-semibold text-lg hover:underline"
-          >
-            yankewei1993@gmail.com
-          </a>
+        <div className="bg-fd-muted/30 rounded-lg p-6 max-w-2xl mx-auto">
+          <h3 className="font-semibold mb-3">我们的隐私原则：</h3>
+          <ul className="text-fd-muted-foreground space-y-2 list-disc list-inside text-left">
+            <li>我们只收集提供服务所必需的数据</li>
+            <li>您的数据安全存储，传输时进行加密</li>
+            <li>我们绝不向第三方出售您的个人信息</li>
+            <li>您完全控制您的数据，可随时删除</li>
+            <li>我们对数据处理方式保持透明</li>
+          </ul>
         </div>
       </div>
     </main>
