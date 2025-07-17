@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function SupportPage() {
   const apps = [
@@ -31,7 +32,7 @@ export default function SupportPage() {
             <div className="text-center mb-4">
               <div className="mb-2">
                 {app.icon.startsWith('/') ? (
-                  <img src={app.icon} alt={`${app.name} logo`} className="w-16 h-16 mx-auto object-contain" />
+                  <Image src={app.icon} alt={`${app.name} logo`} width={64} height={64} className="mx-auto object-contain" />
                 ) : (
                   <div className="text-4xl">{app.icon}</div>
                 )}

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function CountdownPrivacyPage() {
   return (
@@ -14,7 +15,7 @@ export default function CountdownPrivacyPage() {
 
       <div className="text-center mb-8">
         <div className="mb-4">
-          <img src="/image/lunar-loop-logo.png" alt="倒数日-支持农历 logo" className="w-20 h-20 mx-auto object-contain" />
+          <Image src="/image/lunar-loop-logo.png" alt="倒数日-支持农历 logo" width={80} height={80} className="mx-auto object-contain" />
         </div>
         <h1 className="text-3xl font-bold mb-4">倒数日-支持农历 - 隐私政策</h1>
         <p className="text-fd-muted-foreground text-lg">
@@ -30,7 +31,7 @@ export default function CountdownPrivacyPage() {
             最后更新：{`${new Date().getFullYear()} 年 ${new Date().getMonth() + 1} 月 ${new Date().getDate()} 日`}
           </p>
           <p className="text-fd-muted-foreground">
-            本隐私政策描述了倒数日-支持农历应用（"我们"）在您使用我们的倒数日应用时如何收集、使用和保护您的信息。
+            本隐私政策描述了倒数日-支持农历应用（&ldquo;我们&rdquo;）在您使用我们的倒数日应用时如何收集、使用和保护您的信息。
           </p>
         </section>
 

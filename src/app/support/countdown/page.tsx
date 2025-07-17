@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function CountdownSupportPage() {
   return (
@@ -14,7 +15,7 @@ export default function CountdownSupportPage() {
 
       <div className="text-center mb-8">
         <div className="mb-4">
-          <img src="/image/lunar-loop-logo.png" alt="倒数日-支持农历 logo" className="w-20 h-20 mx-auto object-contain" />
+          <Image src="/image/lunar-loop-logo.png" alt="倒数日-支持农历 logo" width={80} height={80} className="mx-auto object-contain" />
         </div>
         <h1 className="text-3xl font-bold mb-4">倒数日-支持农历 - 支持</h1>
         <p className="text-fd-muted-foreground text-lg">
@@ -48,7 +49,7 @@ export default function CountdownSupportPage() {
             <div>
               <h3 className="font-semibold mb-2">如何创建新的倒数日？</h3>
               <p className="text-fd-muted-foreground">
-                点击主屏幕的"+"按钮，然后选择目标日期并为您的倒数日添加标题。
+                点击主屏幕的&ldquo;+&rdquo;按钮，然后选择目标日期并为您的倒数日添加标题。
               </p>
             </div>
             <div>
