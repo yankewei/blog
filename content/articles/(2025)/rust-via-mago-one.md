@@ -32,3 +32,111 @@ fn main() {
     println!("Version string: {}", version.to_string());
 }
 ```
+`use mago_php_version::PHPVersion;` 和 PHP 的 use 很像，也有其它的不一样的地方，暂时不去了解那么多细节，先用起来。跳转到 PHPVersion 的定义处，可以看到这是一个 struct:
+```rust
+pub struct PHPVersion(32);
+```
+### 关键字 pub
+pub 是一个关键字，可以控制在一个 Library 中定义模块的可见性。如果我们把 pub 去掉，再次执行 cargo run，会发现编译失败，提示 PHPVersion 是一个私有结构体，无法在外部访问。
+### 关键字 struct
+#### **定义和实例化**
+从 PHP 开发者的角度来看，Rust struct 像是一个类的属性的集合，语法也比较简单
+```rust
+struct User {
+    id: u32,
+    name: String,
+    email: String,
+}
+// 实例化
+let user = User {
+    id: 1,
+    name: String::from("Kewei Ya"),
+    email: String::from("kewei.yan@example.com"),
+};
+```
+#### **struct 元组**
+Mago 中的 PHPVersion 是一个 Struct 元组，可以不需要为字段进行命名，例如一个长方形可以定义为，第一个元素就是长度，第二个元素就是宽度：
+```rust
+struct Rectangle(u32, u32);
+let rect = Rectangle(10, 20);
+let with = rect.0;
+let height = rect.1;
+```
+#### **为 struct 定义方法**
+和大多数面向对象的语言一样，Rust 也支持为一个 Struct 定义一系列的方法，语法如下, PHPVersion 就定义了 new，major, minor, patch 等方法，
+```rust
+impl PHPVersion {
+    #[inline]
+    pub const fn new(major: u32, minor: u32, patch: u32) -> Self {
+        Self((major << 16) | (minor << 8) | patch)
+    }
+    #[inline]
+    pub const fn major(&self) -> u32 {
+        self.0 >> 16
+    }
+    #[inline]
+    pub const fn minor(&self) -> u32 {
+        (self.0 >> 8) & 0xff
+    }
+    #[inline]
+    pub const fn patch(&self) -> u32 {
+        self.0 & 0xff
+    }
+}
+```
+#### **impl**
+impl 关键字表示为 struct 定义方法，这里边的方法都和 PHPVersion 有关系。暂时先不关注 Attribute `#[inline]`，有几个新概念和语法：
+1. 可以用 `const fn` 修饰函数，这样可以保证在编译时就能计算出结果，而不需要在运行时计算，提高性能。
+2. new 方法的参数和其它方法的参数不一样，这点和 PHP 的静态方法有点像。
+3. 其它作用在实例的方法，&self 其实是 `self: &Self` 的简写，因为第一个参数必须是 struct 的类型，所以可以直接写成 &self, 这里的 & 表示这个方法对实例的不可变借用，可以理解为一个 PHP 对象的引用，但是你不能改变这个对象。
+### trait
+假设我知道了 PHP 的版本号 8.4.1，是否能直接根据这个版本号来实例化一个 struct 呢？可以，Mago 的作者利用 trait 实现了这个功能。
+
+下面的代码表示为 PHPVersion 实现了 FromStr 的 trait
+```rust
+impl FromStr for PHPVersion {
+    type Err = ParsingError;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        if s.is_empty() {
+            return Err(ParsingError::InvalidFormat);
+        }
+
+        let parts = s.split('.').collect::<Vec<_>>();
+        match parts.len() {
+            1 => {
+                let major = parts[0].parse()?;
+
+                Ok(Self::new(major, 0, 0))
+            }
+            2 => {
+                let major = parts[0].parse()?;
+                let minor = parts[1].parse()?;
+
+                Ok(Self::new(major, minor, 0))
+            }
+            3 => {
+                let major = parts[0].parse()?;
+                let minor = parts[1].parse()?;
+                let patch = parts[2].parse()?;
+
+                Ok(Self::new(major, minor, patch))
+            }
+            _ => Err(ParsingError::InvalidFormat),
+        }
+    }
+}
+```
+trait，和 PHP 的 trait 有点像，但又不完全一样，Rust 的 trait 更像是 PHP 的 interface，但是可以包含一些默认实现。 上述的代码就是为 PHPVersion 实现 FromStr 的特征，这样你就可以使用 from_str 的方法。示例：
+```rust
+use mago_php_version::PHPVersion;
+use std::str::FromStr;
+
+let version = PHPVersion::from_str("8.4.1").unwrap();
+```
+因为 FromStr 是 trait，我们需要先导入。但其实有另一个写法:
+```rust
+let version = "8.4.1".parse().unwrap()
+```
+
+--TBC--
