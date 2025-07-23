@@ -138,5 +138,19 @@ let version = PHPVersion::from_str("8.4.1").unwrap();
 ```rust
 let version = "8.4.1".parse().unwrap()
 ```
+unwrap 是作用在 Result 枚举类型的。之后我们再介绍枚举类型。
 
+#### **to_string 方法怎么来的**
+to_string 方法是通过实现 ToString trait 来实现的。在 Rust 中，ToString 是一个 trait，它定义了一个 to_string 方法，用于将一个 struct 转换为字符串。但是 PHPVersion 并没有像 FromStr 一样为 PHPVersion 实现 ToString 啊。
+
+源代码中有一段是为 PHPVersion 实现了 std::fmt::Display
+```rust
+impl std::fmt::Display for PHPVersion {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(f, "{}.{}.{}", self.major(), self.minor(), self.patch())
+    }
+}
+```
+Rust 在源码中自动为 Display 的类型实现了 to_string 的方法。感兴趣的可以自己查一查。
+这种感觉有点像 PHP 的类 use 了某个 trait A，trait A 又 use 了其它 trait B，那么类就自动拥有了 trait B 中的方法。
 --TBC--
