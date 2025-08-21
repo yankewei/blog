@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function CountdownPrivacyPage() {
   return (
     <main className="flex flex-1 flex-col max-w-3xl mx-auto px-4 py-8">
       <div className="mb-6">
-        <Link 
+        <Link
           href="/support"
           className="text-fd-muted-foreground hover:text-fd-foreground transition-colors flex items-center gap-2"
         >
@@ -15,9 +15,15 @@ export default function CountdownPrivacyPage() {
 
       <div className="text-center mb-8">
         <div className="mb-4">
-          <Image src="/image/lunar-loop-logo.png" alt="倒数日-支持农历 logo" width={80} height={80} className="mx-auto object-contain" />
+          <Image
+            src="/image/lunar-loop-logo.png"
+            alt="初一到十五 logo"
+            width={80}
+            height={80}
+            className="mx-auto object-contain"
+          />
         </div>
-        <h1 className="text-3xl font-bold mb-4">倒数日-支持农历 - 隐私政策</h1>
+        <h1 className="text-3xl font-bold mb-4">初一到十五 - 隐私政策</h1>
         <p className="text-fd-muted-foreground text-lg">
           我们如何保护您的隐私和处理您的数据
         </p>
@@ -28,10 +34,11 @@ export default function CountdownPrivacyPage() {
         <section className="bg-fd-muted/30 rounded-lg p-6">
           <h2 className="text-xl font-semibold mb-4">隐私政策</h2>
           <p className="text-fd-muted-foreground mb-4">
-            最后更新：{`${new Date().getFullYear()} 年 ${new Date().getMonth() + 1} 月 ${new Date().getDate()} 日`}
+            最后更新：
+            {`${new Date().getFullYear()} 年 ${new Date().getMonth() + 1} 月 ${new Date().getDate()} 日`}
           </p>
           <p className="text-fd-muted-foreground">
-            本隐私政策描述了倒数日-支持农历应用（&ldquo;我们&rdquo;）在您使用我们的倒数日应用时如何收集、使用和保护您的信息。
+            本隐私政策描述了初一到十五应用（&ldquo;我们&rdquo;）在您使用我们的应用时如何收集、使用和保护您的信息。
           </p>
         </section>
 
@@ -135,8 +142,8 @@ export default function CountdownPrivacyPage() {
           </p>
           <div className="space-y-2">
             <p className="text-fd-muted-foreground">Email:</p>
-            <a 
-              href="mailto:yankewei1993@gmail.com?subject=倒数日-支持农历 Privacy Policy Question" 
+            <a
+              href="mailto:yankewei1993@gmail.com?subject=初一到十五 Privacy Policy Question"
               className="text-fd-foreground font-semibold text-lg hover:underline"
             >
               yankewei1993@gmail.com
@@ -156,4 +163,4 @@ export default function CountdownPrivacyPage() {
       </div>
     </main>
   );
-} 
+}

@@ -5,13 +5,13 @@ export default function SupportPage() {
   const apps = [
           {
         id: 'countdown',
-        name: '倒数日-支持农历',
-        description: '一款帮助您记录重要日期和事件的倒数日应用，支持农历和阳历。',
+        name: '初一到十五',
+        description: '一款专注于农历日期的应用，帮助您追踪农历月份的初一到十五阶段。',
         icon: '/image/lunar-loop-logo.png',
         features: [
-          '创建和管理多个倒数日计时器',
-          '支持阳历和农历两种日历系统',
-          '记录生日、纪念日、节日等重要事件',
+          '显示当前农历日期和时间',
+          '追踪农历月份从初一到十五的进度',
+          '提供农历节气和传统节日信息',
           '简洁直观的用户界面'
         ]
       }

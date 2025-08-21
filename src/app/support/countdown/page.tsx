@@ -15,18 +15,18 @@ export default function CountdownSupportPage() {
 
       <div className="text-center mb-8">
         <div className="mb-4">
-          <Image src="/image/lunar-loop-logo.png" alt="倒数日-支持农历 logo" width={80} height={80} className="mx-auto object-contain" />
+          <Image src="/image/lunar-loop-logo.png" alt="初一到十五 logo" width={80} height={80} className="mx-auto object-contain" />
         </div>
-        <h1 className="text-3xl font-bold mb-4">倒数日-支持农历 - 支持</h1>
+        <h1 className="text-3xl font-bold mb-4">初一到十五 - 支持</h1>
         <p className="text-fd-muted-foreground text-lg">
-          获取倒数日应用的帮助和支持
+          获取初一到十五应用的帮助和支持
         </p>
       </div>
 
       <div className="space-y-8">
         {/* App Description */}
         <section className="bg-fd-muted/30 rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4">关于倒数日-支持农历</h2>
+          <h2 className="text-xl font-semibold mb-4">关于初一到十五</h2>
           <p className="text-fd-muted-foreground mb-4">
             这是一款帮助您记录重要日期和事件的倒数日应用，支持农历和阳历。
           </p>
@@ -77,12 +77,12 @@ export default function CountdownSupportPage() {
         <section className="bg-fd-muted/30 rounded-lg p-6 text-center">
           <h2 className="text-xl font-semibold mb-4">需要更多帮助？</h2>
           <p className="text-fd-muted-foreground mb-4">
-            如果您需要额外支持或有关于倒数日-支持农历应用的具体问题，请联系我们。
+            如果您需要额外支持或有关于初一到十五应用的具体问题，请联系我们。
           </p>
           <div className="space-y-2">
             <p className="text-fd-muted-foreground">Email:</p>
             <a 
-              href="mailto:yankewei1993@gmail.com?subject=倒数日-支持农历 App Support" 
+              href="mailto:yankewei1993@gmail.com?subject=初一到十五 App Support" 
               className="text-fd-foreground font-semibold text-lg hover:underline"
             >
               yankewei1993@gmail.com

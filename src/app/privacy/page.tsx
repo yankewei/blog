@@ -5,8 +5,7 @@ export default function PrivacyPage() {
   const apps = [
           {
         id: 'countdown',
-        name: '倒数日-支持农历',
-        description: '一款帮助您记录重要日期和事件的倒数日应用，支持农历和阳历。',
+        name: '初一到十五',
         icon: '/image/lunar-loop-logo.png',
         privacyHighlights: [
           '所有数据本地存储，保护隐私安全',
