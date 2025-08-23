@@ -1,19 +1,20 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function PrivacyPage() {
   const apps = [
-          {
-        id: 'countdown',
-        name: '初一到十五',
-        icon: '/image/lunar-loop-logo.png',
-        privacyHighlights: [
-          '所有数据本地存储，保护隐私安全',
-          '无需网络连接，离线使用',
-          '绝不向第三方出售个人数据',
-          '完全控制您的倒数日数据'
-        ]
-      }
+    {
+      id: "countdown",
+      name: "初一到十五",
+      description: "记录重要纪念日的倒数日，支持农历和阳历",
+      icon: "/image/lunar-loop-logo.png",
+      privacyHighlights: [
+        "所有数据本地存储，保护隐私安全",
+        "无需网络连接，离线使用",
+        "绝不向第三方出售个人数据",
+        "完全控制您的倒数日数据",
+      ],
+    },
     // 未来可以在这里添加更多APP
   ];
 
@@ -28,17 +29,28 @@ export default function PrivacyPage() {
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {apps.map((app) => (
-          <div key={app.id} className="bg-fd-muted/30 rounded-lg p-6 border border-fd-border">
+          <div
+            key={app.id}
+            className="bg-fd-muted/30 rounded-lg p-6 border border-fd-border"
+          >
             <div className="text-center mb-4">
               <div className="mb-2">
-                {app.icon.startsWith('/') ? (
-                  <Image src={app.icon} alt={`${app.name} logo`} width={64} height={64} className="mx-auto object-contain" />
+                {app.icon.startsWith("/") ? (
+                  <Image
+                    src={app.icon}
+                    alt={`${app.name} logo`}
+                    width={64}
+                    height={64}
+                    className="mx-auto object-contain"
+                  />
                 ) : (
                   <div className="text-4xl">{app.icon}</div>
                 )}
               </div>
               <h2 className="text-xl font-semibold mb-2">{app.name}</h2>
-              <p className="text-fd-muted-foreground text-sm mb-4">{app.description}</p>
+              <p className="text-fd-muted-foreground text-sm mb-4">
+                {app.description}
+              </p>
             </div>
 
             <div className="mb-4">
@@ -86,4 +98,4 @@ export default function PrivacyPage() {
       </div>
     </main>
   );
-} 
+}
